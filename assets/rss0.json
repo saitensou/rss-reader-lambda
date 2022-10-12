@@ -64,30 +64,6 @@
       "PutRequest": {
         "Item": {
           "siteName": {
-            "S": "quora"
-          },
-          "siteURL": {
-            "S": "http://engineering.quora.com/rss"
-          }
-        }
-      }
-    },
-    {
-      "PutRequest": {
-        "Item": {
-          "siteName": {
-            "S": "skybettingandgaming"
-          },
-          "siteURL": {
-            "S": "http://engineering.skybettingandgaming.com/feed.xml"
-          }
-        }
-      }
-    },
-    {
-      "PutRequest": {
-        "Item": {
-          "siteName": {
             "S": "squarespace"
           },
           "siteURL": {
@@ -148,18 +124,6 @@
       "PutRequest": {
         "Item": {
           "siteName": {
-            "S": "transferwise"
-          },
-          "siteURL": {
-            "S": "http://tech.transferwise.com/rss/"
-          }
-        }
-      }
-    },
-    {
-      "PutRequest": {
-        "Item": {
-          "siteName": {
             "S": "netflix"
           },
           "siteURL": {
@@ -208,10 +172,10 @@
       "PutRequest": {
         "Item": {
           "siteName": {
-            "S": "yahoo"
+            "S": "uber"
           },
           "siteURL": {
-            "S": "http://yahooeng.tumblr.com/rss"
+            "S": "https://www.uber.com/blog/rss/"
           }
         }
       }

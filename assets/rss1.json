@@ -244,18 +244,6 @@
       "PutRequest": {
         "Item": {
           "siteName": {
-            "S": "target"
-          },
-          "siteURL": {
-            "S": "https://target.github.io/feed.xml"
-          }
-        }
-      }
-    },
-    {
-      "PutRequest": {
-        "Item": {
-          "siteName": {
             "S": "trivago"
           },
           "siteURL": {
