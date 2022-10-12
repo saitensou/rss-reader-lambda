@@ -1,0 +1,304 @@
+{
+  "rss_origin_table": [
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "chromium"
+          },
+          "siteURL": {
+            "S": "http://blog.chromium.org/atom.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "stackoverflow"
+          },
+          "siteURL": {
+            "S": "http://blog.stackoverflow.com/feed/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "heroku"
+          },
+          "siteURL": {
+            "S": "http://engineering.heroku.com/feed.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "indeed"
+          },
+          "siteURL": {
+            "S": "http://engineering.indeed.com/feed/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "khanacademy"
+          },
+          "siteURL": {
+            "S": "http://engineering.khanacademy.org/rss.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "quora"
+          },
+          "siteURL": {
+            "S": "http://engineering.quora.com/rss"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "skybettingandgaming"
+          },
+          "siteURL": {
+            "S": "http://engineering.skybettingandgaming.com/feed.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "squarespace"
+          },
+          "siteURL": {
+            "S": "http://engineering.squarespace.com/blog?format=RSS"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "tumblr"
+          },
+          "siteURL": {
+            "S": "http://engineering.tumblr.com/rss"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "yelp"
+          },
+          "siteURL": {
+            "S": "http://engineeringblog.yelp.com/feed.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "github"
+          },
+          "siteURL": {
+            "S": "http://githubengineering.com/atom.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "nytimes"
+          },
+          "siteURL": {
+            "S": "http://open.blogs.nytimes.com/feed/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "transferwise"
+          },
+          "siteURL": {
+            "S": "http://tech.transferwise.com/rss/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "netflix"
+          },
+          "siteURL": {
+            "S": "http://techblog.netflix.com/feeds/posts/default"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "ebay"
+          },
+          "siteURL": {
+            "S": "http://www.ebaytechblog.com/feed/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "martinfowler"
+          },
+          "siteURL": {
+            "S": "http://www.martinfowler.com/feed.atom"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "theguardian"
+          },
+          "siteURL": {
+            "S": "http://www.theguardian.com/info/developer-blog/rss"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "yahoo"
+          },
+          "siteURL": {
+            "S": "http://yahooeng.tumblr.com/rss"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "aws"
+          },
+          "siteURL": {
+            "S": "https://aws.amazon.com/blogs/aws/feed/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "cloudflare"
+          },
+          "siteURL": {
+            "S": "https://blog.cloudflare.com/rss/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "imgur"
+          },
+          "siteURL": {
+            "S": "https://blog.imgur.com/feed/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "twitter"
+          },
+          "siteURL": {
+            "S": "https://blog.twitter.com/api/blog.rss"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "unity games"
+          },
+          "siteURL": {
+            "S": "https://blog.unity.com/feed/games"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "unity tech"
+          },
+          "siteURL": {
+            "S": "https://blog.unity.com/feed/technology"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "microsoft"
+          },
+          "siteURL": {
+            "S": "https://blogs.microsoft.com/?feed=rss2"
+          }
+        }
+      }
+    }
+  ]
+}

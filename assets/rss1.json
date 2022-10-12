@@ -1,0 +1,304 @@
+{
+  "rss_origin_table": [
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "booking.com"
+          },
+          "siteURL": {
+            "S": "https://booking.ai/feed"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "vscode"
+          },
+          "siteURL": {
+            "S": "https://devblogs.microsoft.com/visualstudio/tag/visual-studio-code/feed/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "apple"
+          },
+          "siteURL": {
+            "S": "https://developer.apple.com/news/rss/news.rss"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "chrome"
+          },
+          "siteURL": {
+            "S": "https://developer.chrome.com/feeds/blog.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "squareup"
+          },
+          "siteURL": {
+            "S": "https://developer.squareup.com/blog/rss.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "discord"
+          },
+          "siteURL": {
+            "S": "https://discord.com/blog/rss.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "dropbox"
+          },
+          "siteURL": {
+            "S": "https://dropbox.tech/feed"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "linkedin"
+          },
+          "siteURL": {
+            "S": "https://engineering.linkedin.com/blog.rss"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "salesforce"
+          },
+          "siteURL": {
+            "S": "https://engineering.salesforce.com/feed/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "mozilla"
+          },
+          "siteURL": {
+            "S": "https://hacks.mozilla.org/feed/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "kubernetes"
+          },
+          "siteURL": {
+            "S": "https://kubernetes.io/feed.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "spotify"
+          },
+          "siteURL": {
+            "S": "https://labs.spotify.com/feed/"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "Pinterest"
+          },
+          "siteURL": {
+            "S": "https://medium.com/feed/@Pinterest_Engineering"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "SlackAPI"
+          },
+          "siteURL": {
+            "S": "https://medium.com/feed/@SlackAPI"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "airbnb"
+          },
+          "siteURL": {
+            "S": "https://medium.com/feed/airbnb-engineering"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "box"
+          },
+          "siteURL": {
+            "S": "https://medium.com/feed/box-tech-blog"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "paypal"
+          },
+          "siteURL": {
+            "S": "https://medium.com/feed/paypal-tech"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "vimeo"
+          },
+          "siteURL": {
+            "S": "https://medium.com/feed/vimeo-engineering-blog"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "medium"
+          },
+          "siteURL": {
+            "S": "https://medium.engineering/feed"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "stripe"
+          },
+          "siteURL": {
+            "S": "https://stripe.com/blog/feed.rss"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "target"
+          },
+          "siteURL": {
+            "S": "https://target.github.io/feed.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "trivago"
+          },
+          "siteURL": {
+            "S": "https://tech.trivago.com/rss.xml"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "digitalocean"
+          },
+          "siteURL": {
+            "S": "https://www.digitalocean.com/blog/rss"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "docker"
+          },
+          "siteURL": {
+            "S": "https://www.docker.com/blog/feed"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "siteName": {
+            "S": "mongodb"
+          },
+          "siteURL": {
+            "S": "https://www.mongodb.com/blog/rss"
+          }
+        }
+      }
+    }
+  ]
+}
