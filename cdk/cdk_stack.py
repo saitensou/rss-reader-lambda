@@ -1,9 +1,10 @@
-from email import feedparser
 import aws_cdk as cdk
 import aws_cdk.aws_dynamodb as DynamoDB
 import aws_cdk.aws_lambda as Lambda
 import aws_cdk.aws_logs as Logs
 import aws_cdk.aws_apigateway as APIgateway
+import aws_cdk.aws_events as Events
+import aws_cdk.aws_events_targets as EventTargets
 from constructs import Construct
 
 
@@ -80,12 +81,20 @@ class CdkStack(cdk.Stack):
         rss_feed_item_table.grant_read_data(rss_serve_lambda)
 
         # API gateway
-        saitensou_api = APIgateway.LambdaRestApi(
+        saitensou_rss_api_service = APIgateway.LambdaRestApi(
             self,
-            "saitensou-rss-api-service",
+            "saitensou_rss_api_service",
             handler=rss_serve_lambda,
             proxy=False,
-            rest_api_name="saitensou-rss-api-service",
+            rest_api_name="saitensou_rss_api_service",
         )
-        saitensou_api_get_rss = saitensou_api.root.add_resource("rss")
+        saitensou_api_get_rss = saitensou_rss_api_service.root.add_resource("rss")
         saitensou_api_get_rss.add_method("GET")
+
+        # corn job - everyday 2pm
+        saitensou_fetch_rss_cron = Events.Rule(
+            self,
+            "saitensou_fetch_rss_cron",
+            schedule=Events.Schedule.cron(hour="14", minute="0"),
+            targets=[EventTargets.LambdaFunction(handler=rss_fetch_lambda)],
+        )
