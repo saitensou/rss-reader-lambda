@@ -1,4 +1,3 @@
-import json
 import boto3
 import os
 
@@ -20,6 +19,6 @@ def handler(event, context):
     feed_item_table = dynamodb.Table(feed_item_table_name)
 
     result = scanTable(feed_item_table)
-    print (result)
+    print(result)
 
     return result

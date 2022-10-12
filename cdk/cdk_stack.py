@@ -24,8 +24,8 @@ class CdkStack(cdk.Stack):
             self,
             "rss_feed_item_table",
             table_name="rss_feed_item_table",
-            partition_key=DynamoDB.Attribute(name="feedURL", type=DynamoDB.AttributeType.STRING),
-            sort_key=DynamoDB.Attribute(name="pubDate", type=DynamoDB.AttributeType.STRING),
+            partition_key=DynamoDB.Attribute(name="link", type=DynamoDB.AttributeType.STRING),
+            sort_key=DynamoDB.Attribute(name="published", type=DynamoDB.AttributeType.STRING),
             billing_mode=DynamoDB.BillingMode.PAY_PER_REQUEST,
         )
 
@@ -33,15 +33,15 @@ class CdkStack(cdk.Stack):
         feedparser_layer = Lambda.LayerVersion(
             self, "feedparser_layer",
             removal_policy=cdk.RemovalPolicy.RETAIN,
-            code=Lambda.Code.from_asset('lambda-layer/python'),
+            code=Lambda.Code.from_asset('lambda-layer'),
             compatible_runtimes=[Lambda.Runtime.PYTHON_3_9]
         )
 
         # functions
-        rss_fatch_lambda = Lambda.Function(
-            self, 'rss_fatch_lambda',
+        rss_fetch_lambda = Lambda.Function(
+            self, 'rss_fetch_lambda',
             runtime=Lambda.Runtime.PYTHON_3_9,
-            function_name="rss_fatch_lambda",
+            function_name="rss_fetch_lambda",
             code=Lambda.Code.from_asset('lambda'),
             handler='fetch_feed_handler.handler',
             log_retention=Logs.RetentionDays.ONE_WEEK,
@@ -52,8 +52,8 @@ class CdkStack(cdk.Stack):
             },
             layers=[feedparser_layer]
         )
-        rss_origin_table.grant_read_data(rss_fatch_lambda)
-        rss_feed_item_table.grant_read_write_data(rss_fatch_lambda)
+        rss_origin_table.grant_read_data(rss_fetch_lambda)
+        rss_feed_item_table.grant_read_write_data(rss_fetch_lambda)
 
         rss_serve_lambda = Lambda.Function(
             self, 'rss_serve_lambda',
@@ -62,7 +62,7 @@ class CdkStack(cdk.Stack):
             code=Lambda.Code.from_asset('lambda'),
             handler='serve_feed_handler.handler',
             log_retention=Logs.RetentionDays.ONE_WEEK,
-            timeout=cdk.Duration.minutes(5),
+            timeout=cdk.Duration.seconds(10),
             environment={
                 "RSS_FEED_ITEM_TABLE": rss_feed_item_table.table_name
             }
