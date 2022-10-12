@@ -2,7 +2,6 @@ from dateutil.parser import parse
 import boto3
 import os
 import feedparser
-import json
 from datetime import datetime
 import dateutil.relativedelta
 
