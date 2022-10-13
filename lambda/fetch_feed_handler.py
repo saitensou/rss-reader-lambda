@@ -78,7 +78,7 @@ def appendFeed(feedList, feedItem):
         try:
             published = parse(feedItem["published"]).replace(tzinfo=None)
             if published > threadshold:
-                feedItem["published"] = published.strftime("%d/%m/%Y")
+                feedItem["published"] = published.strftime("%Y/%m/%d")
                 feedList.append(feedItem)
         except Exception as e:
             print(e)

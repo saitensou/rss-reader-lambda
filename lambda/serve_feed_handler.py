@@ -6,21 +6,29 @@ feed_item_table_name = os.environ["RSS_FEED_ITEM_TABLE"]
 dynamodb = boto3.resource("dynamodb")
 
 
-def scanTable(table):
-    response = table.scan()
+def scanTable(table, lastKey):
+    response = None
+    if lastKey is None:
+        response = table.scan(Limit=25, ExclusiveStartKey=response["LastEvaluatedKey"])
+    else:
+        response = table.scan(Limit=25)
     data = response["Items"]
-
-    while "LastEvaluatedKey" in response:
-        response = table.scan(ExclusiveStartKey=response["LastEvaluatedKey"])
-        data.extend(response["Items"])
-
-    return data
+    nextkey = response["LastEvaluatedKey"]
+    return (data, nextkey)
 
 
 def handler(event, context):
     feed_item_table = dynamodb.Table(feed_item_table_name)
 
-    result = scanTable(feed_item_table)
+    lastKey = None
+    if lastKey in event["queryStringParameters"]:
+        lastKey = event["queryStringParameters"]["lastKey"]
+
+    data, nextkey = scanTable(feed_item_table, lastKey)
+    result = {
+        "data": data,
+        "nextkey": nextkey,
+    }
     json_result = json.dumps(result)
     print(json_result)
 
