@@ -7,6 +7,6 @@ aws dynamodb batch-write-item \
 # try pagination
 aws dynamodb scan \
     --table-name rss_feed_item_table \
-    --page-size 25 \
+    --limit 2 \
     --region ap-northeast-1 \
     --profile [PROFILE]

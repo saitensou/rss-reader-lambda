@@ -1,6 +1,7 @@
 import json
 import boto3
 import os
+import urllib.parse
 
 feed_item_table_name = os.environ["RSS_FEED_ITEM_TABLE"]
 dynamodb = boto3.resource("dynamodb")
@@ -22,12 +23,12 @@ def handler(event, context):
 
     lastKey = None
     if lastKey in event["queryStringParameters"]:
-        lastKey = event["queryStringParameters"]["lastKey"]
+        lastKey = urllib.parse.unquote_plus(event["queryStringParameters"]["lastKey"])
 
     data, nextkey = scanTable(feed_item_table, lastKey)
     result = {
         "data": data,
-        "nextkey": nextkey,
+        "nextkey": urllib.parse.quote_plus(nextkey),
     }
     json_result = json.dumps(result)
     print(json_result)
